@@ -2,14 +2,14 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-mass-edit",
-    version="3.5.0",
+    version="3.5.1",
     author="David Burke",
     author_email="david@burkesoftware.com",
     description=("Make bulk changes in the Django admin interface"),
     license="BSD",
     keywords="django admin",
     url="https://github.com/burke-software/django-mass-edit",
-    packages=find_packages(),
+    packages=find_packages(include=['massadmin']),
     include_package_data=True,
     classifiers=[
         "Development Status :: 5 - Production/Stable",

@@ -65,7 +65,7 @@ from . import settings
 
 
 def mass_change_selected(modeladmin, request, queryset):
-    selected = queryset.values_list('pk', flat=True)
+    selected = queryset.prefetch_related(None).values_list('pk', flat=True)
 
     redirect_url = get_mass_change_redirect_url(modeladmin.model._meta, selected, request.session)
     redirect_url = add_preserved_filters(
